@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Desafio_02
 {
@@ -29,19 +29,93 @@ namespace Desafio_02
             bool EhDev3 = false;
 
 
-            //T1 - Somar a idade de todos Ubuntus
+            //T1 - Somar a idade de todos Ubuntus ==================================================
+            
+            int IDADE = idade1 + idade2 + idade3;
+            Console.WriteLine($"A soma da idade dos Ubuntus presentes é de: {IDADE} anos.");
+            Console.WriteLine();
+            
+            //T2 - Agrupar os nomes de todos Ubuntus ================================================
+            
+            Console.WriteLine($"Os Ubuntus presentes são: {nome1}, {nome2} e {nome3}");
+            Console.WriteLine();
 
-            //T2 - Agrupar os nomes de todos Ubuntus
+            //T3 - Calcular Média dos IMC de todos Ubuntus ==========================================
+            
+            decimal IMC1 = (decimal)peso1 / (altura1 * altura1);
+            decimal IMC2 = (decimal)peso2 / (altura2 * altura2);
+            decimal IMC3 = (decimal)peso3 / (altura3 * altura3);
+            decimal media = (IMC1 + IMC2 + IMC3) / 3;
+            Console.WriteLine($"A média de IMC (Peso / (AlturaxAltura) dos Ubuntus é de : {media.ToString("f")}.");
+            Console.WriteLine();
+            
+            //T4 - Contar quantos Ubuntus sao Devs  =================================================
+            
+            int EhDev = 0; // variavel atribuida a false, se for DEV recebe valor +1 ( bollean = Verdadeiro)
 
-            //T3 - Calcular Média dos IMC de todos Ubuntus
+            if (EhDev1 == true) 
+            {
+                EhDev = EhDev+1;
+            }
+            else
+            {
+                EhDev = EhDev;
+            };
+            if (EhDev2 == true)
+            {
+                EhDev = EhDev + 1;
+            }
+            else
+            {
+                EhDev = EhDev;
+            };
+            if (EhDev3 == true)
+            {
+                EhDev = EhDev + 1;
+            }
+            else
+            {
+                EhDev = EhDev;
+            };
+            Console.WriteLine($"Temos {EhDev}, entre Ubuntos que são Devs!");
+            Console.WriteLine();
 
-            //T4 - Contar quantos Ubuntus sao Devs
+            //T5 - Exibir somente Ubuntu com nome Silva  ===========================================
 
-            //T5 - Exibir somente Ubuntu com nome Silva
+            bool Silva1 = nome1.Contains("Silva");
+            bool Silva2 = nome2.Contains("Silva");
+            bool Silva3 = nome3.Contains("Silva");
+            string Silva = "";
+            if (Silva1 == true)
+            {
+                Silva = Silva + $" {nome1},";
+            }
+            else
+            {
+                Silva = Silva;
+            };
+            if (Silva2 == true)
+            {
+                Silva = Silva + $" {nome2},";
+            }
+            else
+            {
+                Silva = Silva;
+            };
+            if (Silva3 == true)
+            {
+                Silva = Silva + $" {nome3},";
+            }
+            else
+            {
+                Silva = Silva;
+            };
 
 
-
-            //Imprime na tela
+            Console.WriteLine($"Dentre os Ubuntos:{Silva} possuem Silva no nome.");
+            Console.WriteLine();
+            
+         //Imprime na tela
             Console.WriteLine("UBUNTU 002 - ENDS...");
 
             //PAUSA NA TELA (GAMBIARRA PERMITIDA PRA INICIANTES)
